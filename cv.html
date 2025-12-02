@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - Eric Pitta dos Santos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f4f7f6;
+            --text-main: #2c3e50;
+            --text-light: #ffffff;
+            --primary: #0f2c45;
+            --secondary: #00d2d3;
+            --accent: #5f27cd;
+            --card-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Roboto', sans-serif; background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; }
+        
+        header { background: linear-gradient(135deg, var(--primary) 0%, #1a3c5a 100%); color: var(--text-light); padding: 60px 20px; text-align: center; position: relative; overflow: hidden; }
+        header::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: linear-gradient(90deg, var(--secondary), var(--accent)); }
+        h1 { font-family: 'Montserrat', sans-serif; font-size: 3rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 10px; text-transform: uppercase; }
+        .subtitle { font-family: 'Montserrat', sans-serif; font-size: 1.2rem; font-weight: 400; opacity: 0.9; max-width: 800px; margin: 0 auto 30px; }
+        .contact-bar { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; font-weight: 500; }
+        .contact-bar a { color: var(--secondary); text-decoration: none; padding: 5px 15px; border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; transition: all 0.3s; }
+        .contact-bar a:hover { background: var(--secondary); color: var(--primary); border-color: var(--secondary); }
+
+        .container { max-width: 1100px; margin: -40px auto 40px; padding: 0 20px; position: relative; display: grid; grid-template-columns: 2fr 1fr; gap: 30px; }
+        @media (max-width: 768px) { .container { grid-template-columns: 1fr; margin-top: 20px; } h1 { font-size: 2rem; } }
+
+        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: var(--card-shadow); margin-bottom: 30px; }
+        h2 { font-family: 'Montserrat', sans-serif; font-size: 1.4rem; color: var(--primary); margin-bottom: 20px; border-left: 5px solid var(--secondary); padding-left: 15px; display: flex; align-items: center; }
+
+        .portfolio-section { grid-column: 1 / -1; }
+        .dash-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
+        .dash-card { background: white; border-radius: 10px; overflow: hidden; border: 1px solid #e1e1e1; transition: transform 0.3s; }
+        .dash-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+        .dash-img-container { width: 100%; aspect-ratio: 16/9; background-color: #2c3e50; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
+        .dash-img-container img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+        
+        .placeholder-text { color: rgba(255,255,255,0.5); font-weight: bold; text-align: center; padding: 20px; font-size: 0.8rem; }
+        .dash-info { padding: 20px; }
+        .dash-info h3 { font-size: 1.1rem; color: var(--primary); margin-bottom: 8px; }
+        .dash-info p { font-size: 0.9rem; color: #666; }
+
+        .job { margin-bottom: 25px; border-left: 2px solid #eee; padding-left: 20px; position: relative; }
+        .job::before { content: ''; position: absolute; left: -6px; top: 0; width: 10px; height: 10px; background: var(--secondary); border-radius: 50%; }
+        .job-title { font-weight: 700; font-size: 1.1rem; color: var(--primary); }
+        .job-company { color: var(--accent); font-weight: 600; font-size: 0.95rem; margin-bottom: 5px; display: block; }
+        .job-date { font-size: 0.85rem; color: #888; margin-bottom: 10px; display: block; }
+
+        .tags { display: flex; flex-wrap: wrap; gap: 10px; }
+        .tag { background: #eef2f5; color: var(--primary); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+        .tag.tech { background: rgba(0, 210, 211, 0.15); color: #008c8d; }
+        .cert-item { margin-bottom: 15px; font-size: 0.95rem; }
+        .cert-item strong { display: block; color: var(--primary); }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>ERIC PITTA DOS SANTOS</h1>
+    <p class="subtitle">
+        Agente de Administração| Analista de Dados & Gestão Pública | Especialista em Otimização de Processos
+        <br>
+        <span style="font-size: 0.9rem; margin-top: 10px; display: block;">
+            Conectando a solidez da Administração Pública com a inovação de Data Science e Cloud Computing.
+        </span>
+    </p>
+    <div class="contact-bar">
+        <a href="https://github.com/eric-pitta" target="_blank">github.com/eric-pitta</a>
+        <a href="#">Rio de Janeiro, RJ</a>
+        <a href="mailto:eric.santos@prefeitura.rio">eric.santos@prefeitura.rio</a>
+    </div>
+</header>
+
+<div class="container">
+
+    <section class="card portfolio-section">
+        <h2>Portfólio de Inteligência de Dados (Power BI)</h2>
+        
+        <div class="dash-grid">
+            
+            <div class="dash-card">
+                <div class="dash-img-container">
+                    <img src="ind.jpg" alt="Dashboard Indicações" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+                    <div class="placeholder-text" style="display:none">
+                        Imagem não encontrada<br>(Nome esperado: ind.jpg)
+                    </div>
+                </div>
+                <div class="dash-info">
+                    <h3>Indicações Legislativas</h3>
+                    <p>Monitoramento visual de indicações e solicitações feitas pelos vereadores da Câmara do Rio. Análise de volume e categorias.</p>
+                </div>
+            </div>
+
+            <div class="dash-card">
+                <div class="dash-img-container">
+                    <img src="req.jpg" alt="Dashboard Requerimentos" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+                    <div class="placeholder-text" style="display:none">
+                          Imagem não encontrada<br>(Nome esperado: req.jpg)
+                    </div>
+                </div>
+                <div class="dash-info">
+                    <h3>Requerimentos de Informação</h3>
+                    <p>Painel dedicado ao controle de Requerimentos de Informações oficiais, garantindo transparência e agilidade.</p>
+                </div>
+            </div>
+
+            <div class="dash-card">
+                <div class="dash-img-container">
+                    <img src="produtividade.jpg" alt="Dashboard Produtividade" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+                    <div class="placeholder-text" style="display:none">
+                          Imagem não encontrada<br>(Nome esperado: produtividade.jpg)
+                    </div>
+                </div>
+                <div class="dash-info">
+                    <h3>Métricas de Produtividade</h3>
+                    <p>Acompanhamento de KPIs do setor na resposta às solicitações, focando em redução de prazos e eficiência.</p>
+                </div>
+
+                </div>
+                <div class="dash-card">
+                <div class="dash-img-container">
+                    <img src="ri.jpg" alt="Dashboard Requerimentos" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+                    <div class="placeholder-text" style="display:none">
+                          Imagem não encontrada<br>(Nome esperado: ri.jpg)
+                    </div>
+
+                </div>
+                <div class="dash-info">
+                    <h3>Requerimentos de Informação</h3>
+                    <p>Painel dedicado ao controle de Requerimentos de Informações oficiais, garantindo transparência e agilidade.</p>
+                </div>
+            </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="main-col">
+        <div class="card">
+            <h2>Experiência Profissional</h2>
+
+            <div class="job">
+                <span class="job-title">Coord. Geral de Acompanhamento Legislativo e Parlamentar</span>
+                <span class="job-company">Secretaria Municipal de Governo (SMG)</span>
+                <span class="job-date">Atualmente</span>
+                <p>Responsável pela <strong>Estrutura de Dados do Setor</strong>, criação de Dashboards e automação de fluxos.</p>
+                <ul style="margin-left: 20px; font-size: 0.95rem; margin-top: 5px;">
+                    <li>Gestão técnica do Google Cloud Console.</li>
+                    <li>Desenvolvimento de scripts de automação (Python e JavaScript) para otimização de tarefas.</li>
+                    <li>Montagem da pauta da Ordem do Dia, consolidando opinamentos dos órgãos sobre proposições legislativas e projetos de lei.</li>
+                    <li>Articulação institucional com diferentes níveis (técnico e gerencial).</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <span class="job-title">Gestão de Atos Oficiais</span>
+                <span class="job-company">Gabinete do Prefeito (PCRJ)</span>
+                <span class="job-date">Período Anterior</span>
+                <p>Responsável pelas publicações dos Atos do Prefeito e da Casa Civil no Diário Oficial. Controle rigoroso de legalidade, prazos e redação oficial de documentos críticos para a administração municipal.</p>
+            </div>
+
+            <div class="job">
+                <span class="job-title">Analista de Processos (Equipe Processo.Rio)</span>
+                <span class="job-company">SEGOVI</span>
+                <span class="job-date">Período Anterior</span>
+                <p>Início da atuação focada em <strong>Análise de Dados</strong> e mapeamento de processos administrativos, contribuindo para a transição digital da Prefeitura.</p>
+            </div>
+
+            <div class="job">
+                <span class="job-title">Coordenadoria de Fomento Cultural</span>
+                <span class="job-company">Secretaria Municipal de Cultura</span>
+                <span class="job-date">Período Anterior</span>
+                <p>Gestão e acompanhamento de projetos de fomento cultural.</p>
+            </div>
+
+            <div class="job">
+                <span class="job-title">Gabinete da 8ª CRE (Bangu)</span>
+                <span class="job-company">Secretaria Municipal de Educação</span>
+                <span class="job-date">Período Anterior</span>
+                <p>Análise e gestão de prestações de contas das escolas (PDDE), garantindo conformidade financeira e administrativa.</p>
+            </div>
+
+            <div class="job">
+                <span class="job-title">Aspirante a Oficial</span>
+                <span class="job-company">Exército Brasileiro</span>
+                <span class="job-date">Jan/2012 – Dez/2012</span>
+                <p>Liderança de equipes, disciplina e gestão logística em ambiente de alta pressão.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <aside class="side-col">
+        
+        <div class="card">
+            <h2>Formação</h2>
+            
+        
+            <div class="cert-item">
+                <strong>Ensino Superior em Banco de Dados</strong>
+                Unyleya<br>
+                <span style="font-size:0.85rem; color:#666">Concluído em Dez/2023</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Certificações Tech</h2>
+
+             <div class="cert-item">
+                <strong>Residência em Tecnologia da Informação (540h)</strong>
+                BRISA / SOFTEX   / MCTIC<br>
+                <span style="font-size:0.85rem; color:#666">Computação Avançada (Ago/2024)</span><br>
+                <span style="font-size:0.85rem; color:#666">🥇Aprovado em 1º lugar</span>
+            </div>
+            <div class="cert-item">
+                <strong>DeFi Talents (Finanças Descentralizadas)</strong>
+                Frankfurt School Blockchain Center
+            </div>
+            <div class="cert-item">
+                <strong>Blockchain & Digital Currencies</strong>
+                University of Nicosia
+            </div>
+            <div class="cert-item">
+                <strong>Smart Contracts (Solidity)</strong>
+                Ethereum.Rio22 (Bolsista)
+            </div>
+            <div class="cert-item">
+                <strong>Python para Data Science & SQL</strong>
+                Alura
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Competências & Tech</h2>
+            <div class="tags">
+                <span class="tag tech">Google Cloud Platform (GCP)</span>
+                <span class="tag tech">Google BigQuery</span>
+                <span class="tag tech">Python (Automação/Dados)</span>
+                <span class="tag tech">Excel Avançado</span>
+                <span class="tag tech">Power BI</span>
+                <span class="tag tech">SQL / MySQL</span>
+                <span class="tag tech">JavaScript</span>
+                <span class="tag">Dados de Mobilidade (GTFS)</span>
+                <span class="tag">Raciocínio Lógico</span>
+                <span class="tag">Articulação Institucional</span>
+                <span class="tag">Gestão Pública</span>
+            </div>
+        </div>
+
+    </aside>
+
+</div>
+
+</body>
+</html>
